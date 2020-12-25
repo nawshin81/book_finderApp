@@ -26,4 +26,11 @@ const getBooksByTerm = (
     setTotalPages(pages);
   });
 };
-export { getBooksByTerm };
+
+const getBookDetails=(bookId,setCurrentBook)=>{
+  GBapi.get('volumes/'+bookId)
+  .then((response)=>{
+    console.log(response);
+  })
+}
+export { getBooksByTerm,getBookDetails };
