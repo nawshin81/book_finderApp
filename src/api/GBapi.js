@@ -27,10 +27,16 @@ const getBooksByTerm = (
   });
 };
 
-const getBookDetails=(bookId,setCurrentBook)=>{
-  GBapi.get('volumes/'+bookId)
-  .then((response)=>{
-    console.log(response);
-  })
-}
-export { getBooksByTerm,getBookDetails };
+const getBookDetails = (bookId, setCurrentBook, setCurrentImage) => {
+  GBapi.get("volumes/" + bookId).then((response) => {
+    console.log(response.data.volumeInfo);
+    setCurrentBook(response.data.volumeInfo);
+    {
+      response.data.volumeInfo.imageLinks == undefined
+        ? setCurrentImage("")
+        : setCurrentImage(response.data.volumeInfo.imageLinks.thumbnail);
+    }
+    // console.log(response.data.volumeInfo.imageLinks.thumbnail)
+  });
+};
+export { getBooksByTerm, getBookDetails };
