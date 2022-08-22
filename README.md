@@ -1,3 +1,14 @@
+### Book FInder ###
+A web application to find books and book's information based on search keyword.
+
+The users can filter the search result by
+ - newest and
+ - relevance options
+
+### Technologies ###
+ - React 
+ - API: Google API for books
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
