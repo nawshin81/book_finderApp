@@ -1,4 +1,4 @@
-### Book FInder ###
+### Book Finder ###
 A web application to find books and book's information based on search keyword.
 
 The users can filter the search result by
